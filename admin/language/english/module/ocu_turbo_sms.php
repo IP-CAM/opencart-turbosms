@@ -10,11 +10,11 @@
  * http://www.gnu.org/copyleft/gpl.html
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@opencart.ua so we can send you a copy immediately.
+
  *
  * @category   OpenCart
  * @package    OCU TurboSMS
- * @copyright  Copyright (c) 2011 Eugene Kuligin by OpenCart Ukrainian Community (http://www.opencart.ua)
+ * @copyright  Copyright (c) 2011 Eugene Lifescale by OpenCart Ukrainian Community (http://opencart-ukraine.tumblr.com)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License, Version 3
  */
 
@@ -23,7 +23,7 @@
 /**
  * @category   OpenCart
  * @package    OCU TurboSMS
- * @copyright  Copyright (c) 2011 Eugene Kuligin by OpenCart Ukrainian Community (http://www.opencart.ua)
+ * @copyright  Copyright (c) 2011 Eugene Lifescale by OpenCart Ukrainian Community (http://opencart-ukraine.tumblr.com)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License, Version 3
  */
 
@@ -121,7 +121,7 @@ $_['ocu_turbo_sms_text_about_tab_description'] =
 <br />
 Module is designed to send SMS notifications via gateway TurboSMS.
 <br /><br />
-Product was developed under the project <a href="http://www.opencart.ua" target="_blank">OpenCart Ukrainian Community</a><br />
+Product was developed under the project <a href="http://opencart-ukraine.tumblr.com" target="_blank">OpenCart Ukrainian Community</a><br />
 This product is distributed under a <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU General Public License, Version 3</a><br /><br />
 Current version: %s<br />
-<a href="http://www.opencart.ua" target="_blank">Project page</a> | <a href="http://forum.opencart.ua" target="_blank">Support center</a> | <a href="http://www.opencart.ua/contact" target="_blank">Contact us</a>';
+<a href="http://opencart-ukraine.tumblr.com" target="_blank">Project page</a> | <a href="http://forum.opencart-ukraine.tumblr.com" target="_blank">Support center</a> | <a href="http://opencart-ukraine.tumblr.com/contact" target="_blank">Contact us</a>';
