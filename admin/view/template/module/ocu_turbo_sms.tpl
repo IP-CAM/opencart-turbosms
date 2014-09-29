@@ -78,12 +78,10 @@
                   <td><?php echo $ocu_turbo_sms_text_message ?></td>
                   <td><?php echo $ocu_turbo_sms_text_wappush ?></td>
                   <td><?php echo $ocu_turbo_sms_text_cost ?></td>
-                  <td><?php echo $ocu_turbo_sms_text_credits ?></td>
                   <td><?php echo $ocu_turbo_sms_text_send_time ?></td>
                   <td><?php echo $ocu_turbo_sms_text_sended ?></td>
                   <td><?php echo $ocu_turbo_sms_text_updated ?></td>
                   <td><?php echo $ocu_turbo_sms_text_status ?></td>
-                  <td><?php echo $ocu_turbo_sms_text_dlr_status ?></td>
                   <td><input type="checkbox" name="mcheck" id="mcheck" value="1" title="<?php echo $ocu_turbo_sms_text_check_all ?>" /></td>
                 </tr>
               </thead>
@@ -99,12 +97,10 @@
                   <td><?php echo $item['message'] ?></td>
                   <td><?php echo $item['wappush'] ?></td>
                   <td><?php echo $item['cost'] ?></td>
-                  <td><?php echo $item['credits'] ?></td>
-                  <td><?php echo $item['send_time'] ?></td>
+                  <td><?php echo $item['added'] ?></td>
                   <td><?php echo $item['sended'] ?></td>
-                  <td><?php echo $item['updated'] ?></td>
+                  <td><?php echo $item['received'] ?></td>
                   <td><?php echo $item['status'] ?></td>
-                  <td><?php echo $item['dlr_status'] ?></td>
                   <td><input type="checkbox" name="item[<?php echo $item['id'] ?>]" class="ccheck" value="1" /></td>
                 </tr>
               <?php } ?>
