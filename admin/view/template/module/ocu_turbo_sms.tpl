@@ -16,6 +16,11 @@
   <?php if ($error) { ?>
     <div class="warning"><?php echo $error; ?></div>
   <?php } ?>
+  
+  <?php if ($success) { ?>
+  <div class="success"><?php echo $success; ?></div>
+  <?php } ?>
+  
   <div class="box">
     <div class="heading">
       <h1><img src="view/image/module.png" /><?php echo $heading_title ?></h1>
