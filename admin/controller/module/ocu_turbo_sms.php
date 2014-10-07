@@ -53,8 +53,19 @@ class ControllerModuleOCUTurboSMS extends Controller
                       isset($this->request->post['item']) &&
                       isset($this->_gateway)):
 
-                    foreach ($this->request->post['item'] as $id => $value) {
-                        $this->_gateway->remove($id);
+                    if (isset($this->request->get['action']) && $this->request->get['action'] == 'remove') {
+                        foreach ($this->request->post['item'] as $id => $value) {
+                            $this->_gateway->remove($id);
+                        }
+                    }
+
+                    if (isset($this->request->get['action']) && $this->request->get['action'] == 'resend') {
+                        foreach ($this->request->post['item'] as $id => $value) {
+                            $row = $this->_gateway->get($id);
+                            if ($row && true === $this->ocu_turbo_sms_init()) {
+                                $this->ocu_turbo_sms_gateway->send($row['number'], $row['message']);
+                            }
+                        }
                     }
                 break;
 
