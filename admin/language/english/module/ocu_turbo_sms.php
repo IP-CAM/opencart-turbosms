@@ -81,6 +81,7 @@ $_['ocu_turbo_sms_text_updated'] = 'Updating time';
 $_['ocu_turbo_sms_text_connection_established'] = 'Connection is established';
 $_['ocu_turbo_sms_text_connection_error'] = 'Gateway is not connected';
 $_['ocu_turbo_sms_text_items_not_found'] = 'Massages are not found';
+$_['ocu_turbo_sms_text_resend'] = 'Send Again';
 
 // Error
 $_['ocu_turbo_sms_error_permission'] = 'You have not authority to change settings of this module!';
