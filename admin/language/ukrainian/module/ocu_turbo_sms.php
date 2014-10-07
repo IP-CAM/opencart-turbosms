@@ -81,6 +81,7 @@ $_['ocu_turbo_sms_text_updated'] = 'Час обновлення';
 $_['ocu_turbo_sms_text_connection_established'] = 'З`єднання встановленно';
 $_['ocu_turbo_sms_text_connection_error'] = 'Шлюз не подключений';
 $_['ocu_turbo_sms_text_items_not_found'] = 'Повідомлень не знайдено';
+$_['ocu_turbo_sms_text_resend'] = 'Надіслати знову';
 
 // Error
 $_['ocu_turbo_sms_error_permission'] = 'Ви не маєте повноважень для зміни налаштувань даного модуля!';
