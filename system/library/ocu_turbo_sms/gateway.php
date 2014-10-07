@@ -166,4 +166,10 @@ final class OCUTurboSMSGateway
     {
         return $this->_connection->exec("DELETE FROM $this->_table WHERE id = $id");
     }
+    
+    public function get($id)
+    {
+        return $this->_connection->query("SELECT * FROM $this->_table WHERE id = " . (int) $id . " LIMIT 1")
+                                 ->fetch();
+    }
 }
