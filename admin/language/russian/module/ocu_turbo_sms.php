@@ -82,6 +82,8 @@ $_['ocu_turbo_sms_text_connection_established'] = 'Соединение уста
 $_['ocu_turbo_sms_text_connection_error'] = 'Шлюз не подключен';
 $_['ocu_turbo_sms_text_items_not_found'] = 'Сообщений не найдено';
 $_['ocu_turbo_sms_text_resend'] = 'Отправить снова';
+$_['ocu_turbo_sms_text_resend_success'] = 'Выбранные сообщения успешно отправлены!';
+$_['ocu_turbo_sms_text_remove_success'] = 'Выбранные сообщения успешно удалены!';
 
 // Error
 $_['ocu_turbo_sms_error_permission'] = 'Вы не имеете полномочий для изменения настроек данного модуля!';
