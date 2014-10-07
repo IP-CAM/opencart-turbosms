@@ -57,7 +57,7 @@ class ControllerModuleOCUTurboSMS extends Controller
                         foreach ($this->request->post['item'] as $id => $value) {
                             $this->_gateway->remove($id);
                             
-                            $this->session->data['success'] = $this->language->get('text_remove_success');
+                            $this->session->data['success'] = $this->language->get('ocu_turbo_sms_text_remove_success');
                         }
                     }
 
@@ -67,7 +67,7 @@ class ControllerModuleOCUTurboSMS extends Controller
                             if ($row && true === $this->ocu_turbo_sms_init()) {
                                 $this->ocu_turbo_sms_gateway->send($row['number'], $row['message']);
                                 
-                                $this->session->data['success'] = $this->language->get('text_resend_success');
+                                $this->session->data['success'] = $this->language->get('ocu_turbo_sms_text_resend_success');
 
                             }
                         }
