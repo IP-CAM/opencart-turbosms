@@ -110,19 +110,19 @@ final class OCUTurboSMSGateway
         if (isset($filter['time'])) {
             switch ($filter['time']) {
                 case 'today':
-                    $where[] = "updated >= FROM_UNIXTIME(" . mktime(0, 0, 0, date('m'), date('d'), date('Y')) .")";
+                    $where[] = "sended >= FROM_UNIXTIME(" . mktime(0, 0, 0, date('m'), date('d'), date('Y')) .")";
                 break;
                 case 'tomorrow':
-                    $where[] = "updated >= FROM_UNIXTIME(" . mktime(0, 0, 0, date('m'), date('d')-1, date('Y')) .")";
+                    $where[] = "sended >= FROM_UNIXTIME(" . mktime(0, 0, 0, date('m'), date('d')-1, date('Y')) .")";
                 break;
                 case 'week':
-                    $where[] = "updated >= FROM_UNIXTIME(" . mktime(0, 0, 0, date('m'), date('d')-7, date('Y')) .")";
+                    $where[] = "sended >= FROM_UNIXTIME(" . mktime(0, 0, 0, date('m'), date('d')-7, date('Y')) .")";
                 break;
                 case 'mount':
-                    $where[] = "updated >= FROM_UNIXTIME(" . mktime(0, 0, 0, date('m')-1, date('d'), date('Y')) .")";
+                    $where[] = "sended >= FROM_UNIXTIME(" . mktime(0, 0, 0, date('m')-1, date('d'), date('Y')) .")";
                 break;
                 case 'year':
-                    $where[] = "updated >= FROM_UNIXTIME(" . mktime(0, 0, 0, date('m'), date('d'), date('Y')-1) .")";
+                    $where[] = "sended >= FROM_UNIXTIME(" . mktime(0, 0, 0, date('m'), date('d'), date('Y')-1) .")";
                 break;
             }
 
