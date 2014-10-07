@@ -56,6 +56,8 @@ class ControllerModuleOCUTurboSMS extends Controller
                     if (isset($this->request->get['action']) && $this->request->get['action'] == 'remove') {
                         foreach ($this->request->post['item'] as $id => $value) {
                             $this->_gateway->remove($id);
+                            
+                            $this->session->data['success'] = $this->language->get('text_remove_success');
                         }
                     }
 
@@ -64,6 +66,9 @@ class ControllerModuleOCUTurboSMS extends Controller
                             $row = $this->_gateway->get($id);
                             if ($row && true === $this->ocu_turbo_sms_init()) {
                                 $this->ocu_turbo_sms_gateway->send($row['number'], $row['message']);
+                                
+                                $this->session->data['success'] = $this->language->get('text_resend_success');
+
                             }
                         }
                     }
@@ -168,6 +173,14 @@ class ControllerModuleOCUTurboSMS extends Controller
         $this->data['url_action']      = $this->url->link('module/ocu_turbo_sms', 'token=' . $this->session->data['token'], 'SSL');
         $this->data['url_cancel']      = $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL');
 
+        if (isset($this->session->data['success'])) {
+            $this->data['success'] = $this->session->data['success'];
+
+            unset($this->session->data['success']);
+        } else {
+            $this->data['success'] = '';
+        }
+        
         // If we have a new form values from request
         foreach ($this->request->post as $key => $value) {
             $this->data['value_' . $key] = $value;
