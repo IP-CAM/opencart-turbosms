@@ -52,21 +52,21 @@ final class OCUTurboSMSGateway
         $this->_connection->query("SET NAMES utf8");
 
         // Add default DLR
-        $this->addDlr('UNSENDED');
-        $this->addDlr('ERROR');
+        $this->addDlr('NULL');
+        //$this->addDlr('UNSENDED');
+        //$this->addDlr('ERROR');
         $this->addDlr('SENDED');
         $this->addDlr('ENROUTE');
         $this->addDlr('DELIVRD');
         $this->addDlr('EXPIRED');
-        $this->addDlr('DELETED');
+        //$this->addDlr('DELETED');
         $this->addDlr('UNDELIV');
         $this->addDlr('ACCEPTD');
         $this->addDlr('REJECTD');
         $this->addDlr('UNKNOWN');
-        $this->addDlr('RECREDITED');
-        $this->addDlr('STOPPED');
-        $this->addDlr('REMOVED');
-
+        //$this->addDlr('RECREDITED');
+        //$this->addDlr('STOPPED');
+        //$this->addDlr('REMOVED');
     }
 
 
@@ -129,7 +129,7 @@ final class OCUTurboSMSGateway
         }
 
         if (isset($filter['dlr_status']) && in_array($filter['dlr_status'], $this->_dlr)) {
-            $where[] = "dlr_status = '{$filter['dlr_status']}'";
+            $where[] = "status = '{$filter['dlr_status']}'";
         }
 
         if (isset($filter['count'])) {
