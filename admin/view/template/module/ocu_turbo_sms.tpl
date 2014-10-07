@@ -109,7 +109,8 @@
             <input type="hidden" name="list_form" value="1" />
           </form>
           <div class="buttons" style="float:right">
-            <a onclick="$('#list-form').submit();" class="button"><?php echo $ocu_turbo_sms_text_delete ?></a>
+            <a onclick="$('#list-form').attr('action', $('#list-form').attr('action') + '&action=resend');$('#list-form').submit();" class="button"><?php echo $ocu_turbo_sms_text_resend ?></a>
+            <a onclick="$('#list-form').attr('action', $('#list-form').attr('action') + '&action=remove');$('#list-form').submit();" class="button"><?php echo $ocu_turbo_sms_text_delete ?></a>
           </div>
           <?php echo $ocu_turbo_sms_text_displayed ?>: <?php echo $displayed_items ?> / <?php echo $total_items ?>
         <?php } else { ?>
